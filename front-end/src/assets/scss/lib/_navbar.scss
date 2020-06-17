@@ -1,0 +1,40 @@
+.navbar {
+  font-size: $font-size-navbar;
+
+  .navbar-brand {
+    font-weight: $font-weight-normal;
+    font-size: $font-size-navbar-large;
+    color: $navbar-text-color;
+    &:hover {
+      color: $navbar-text-color;
+    }
+  }
+
+  .navbar-nav {
+    > a:not(.btn):hover {
+      color: $link-hover-color;
+    }
+  }
+
+  &__tooltip {
+    padding: 2px;
+    margin: 0 8px;
+
+    > svg:hover {
+      transition: $navbar-tooltip-transition;
+      fill: $navbar-tooltip-color-hover;
+    }
+  }
+
+  &__tooltip-text {
+    background-color: $navbar-tooltip-text-bg-color !important;
+  }
+}
+
+.navbar-default {
+  background: $navbar-bg;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: $navbar-height;
+  overflow: hidden;
+  z-index: 1000;
+}
